@@ -1,0 +1,57 @@
+@img-base: ~"../img";
+@font-base: ~"../fonts";
+
+// Colors
+@white: #FFF;
+@light-gray: #e0e0e0;
+@gray: #7b7b7b;
+@dark-gray: #515151;
+
+
+// Typography
+
+
+// Media Queries
+
+@small-device-width: 480px; // 30rem
+@wtf-device-width: 672px; // 42rem
+@wtf-device-width-min: (@wtf-device-width + 1px); // 42.0625rem
+@wtf-device-width-max: (@wtf-device-width - 1px); // 41.9375rem
+@normal-device-width: 768px; // 48rem
+@normal-device-height: 800px;
+@normal-device-width-min: (@normal-device-width + 1px); // 48.0625rem
+@normal-device-width-max: (@normal-device-width - 1px); // 47.9375rem
+@big-device-width: 1024px; // 64rem
+@big-device-width-min: (@big-device-width + 1px); // 64.0625rem
+@big-device-width-max: (@big-device-width - 1px); // 63.9375rem
+@huge-device-width: 1366px; // 85.375rem
+@huge-device-width-min: (@huge-device-width + 1px);  // 85.4375rem
+@huge-device-width-max: (@huge-device-width - 1px); // 85.3125rem
+
+@mobile: ~"screen and (max-width: @{small-device-width})";
+
+@mobile-up: ~"screen and (min-width: @{small-device-width})";
+
+// Width between @small-device-width and @normal-device-width
+@phablet: ~"screen and (min-width: @{small-device-width}) and (max-width: @{normal-device-width})";
+
+// Width smaller than @wtf-device width
+@phablet-down: ~"screen and (max-width: @{wtf-device-width-max})";
+
+// width larger than @small-device-width
+@phablet-up: ~"screen and (min-width: @{wtf-device-width-min})";
+
+// width smaller than @normal-device-width-max
+@tablet-down: ~"screen and (max-width: @{big-device-width-max})";
+
+// width larger than @normal-device-width
+@tablet-up: ~"screen and (min-width: @{normal-device-width})";
+
+@tablet-height-up: ~"screen and (min-width: @{normal-device-width}) and (min-height: @{normal-device-height})";
+
+// width larger than @big-device-width-min
+@desktop: ~"screen and (min-width: @{big-device-width})";
+
+@desktop-up: ~"screen and (min-width: @{big-device-width-min})";
+
+@desktop-down: ~"screen and (max-width: @{big-device-width})";

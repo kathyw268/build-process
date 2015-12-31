@@ -1,0 +1,22 @@
+html,
+body {
+	font-size: 16px;
+	max-width: 100%;
+	
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+
+html {
+	overflow-x: hidden;
+	box-sizing: border-box;
+}
+
+* {
+	&, // *
+	&::after, // *::after
+	&::before { // *::before
+		box-sizing: inherit;
+	}
+}
